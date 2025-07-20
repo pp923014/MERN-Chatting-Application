@@ -1,9 +1,16 @@
-function App() {
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Chat from './pages/Chat';
+import Settings from './pages/Settings';
+
+const App = () => {
   return (
-    <div className="h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
-      <h1 className="text-4xl font-bold text-white bg-red-500">Tailwind is working!</h1>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/chat" element={<Chat />} />
+      <Route path="/settings" element={<Settings />} />
+    </Routes>
   );
-}
+};
 
 export default App;
